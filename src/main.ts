@@ -9,17 +9,11 @@ async function bootstrap() {
     transport: Transport.KAFKA,
     options: {
       client: {
-        brokers: ['host.docker.internal:9094'],
-        // brokers: ['kafka:9094'],
+        // brokers: ['host.docker.internal:9092'],
+        brokers: ['kafka:9094'],
       },
       consumer: {
         groupId: 'orders-consumer',
-      },
-      requestTimeout: 30000,
-      retry: {
-        initialRetryTime: 500,
-        maxRetryTime: 10000,
-        retries: 2,
       },
     },
   });
@@ -27,4 +21,5 @@ async function bootstrap() {
 
   await app.listen(3000);
 }
+
 bootstrap();

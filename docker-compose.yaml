@@ -8,8 +8,8 @@ services:
       - 5555:5555
     volumes:
       - .:/home/node/app
-    extra_hosts:
-      - 'host.docker.internal:127.0.0.1'
+    networks:
+      - my-network
 
   db:
     image: bitnami/mongodb:5.0.17
@@ -20,6 +20,8 @@ services:
       MONGODB_REPLICA_SET_MODE: primary
       MONGODB_REPLICA_SET_KEY: 123456
       MONGODB_DATABASE: nest
+    networks:
+      - my-network
 
 volumes:
   mongodb_data:
@@ -28,3 +30,4 @@ volumes:
 networks:
   my-network:
     external: true
+    driver: bridge
