@@ -43,7 +43,7 @@ Content-Type: application/json
   "asset_id": "asset1",
   "wallet_id": "wallet1",
   "shares": 5,
-  "price": 100,
+  "price": 10,
   "type": "BUY"
 }
 
@@ -55,7 +55,7 @@ POST http://localhost:3000/wallets/wallet1/orders/execute
 Content-Type: application/json
 
 {
-  "order_id": "65ad8d8fe4759215dda4d463",
+  "order_id": "65b339bb4e43558d857c2729",
   "status": "CLOSED",
   "related_investor_id": "xxxx",
   "broker_transaction_id": "xxxx",

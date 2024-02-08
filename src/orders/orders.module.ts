@@ -13,7 +13,7 @@ import { OrdersService } from './orders.service';
           client: {
             clientId: 'orders',
             // brokers: ['host.docker.internal:9092'],
-            brokers: ['kafka:29092'], // para interna do docker
+            brokers: ['kafka:9094'], // para interna do docker
           },
         },
       },
