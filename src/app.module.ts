@@ -15,7 +15,8 @@ import { WalletsModule } from './wallets/wallets.module';
     AssetsModule, 
     WalletsModule, 
     OrdersModule, 
-    MongooseModule.forRoot(process.env.DATABASE_URL)],
+    MongooseModule.forRoot(process.env.DATABASE_URL)
+  ],
   controllers: [AppController],
   providers: [AppService],
 })

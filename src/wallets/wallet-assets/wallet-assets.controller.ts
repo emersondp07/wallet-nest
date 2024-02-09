@@ -1,4 +1,12 @@
-import { Body, Controller, Get, MessageEvent, Param, Post, Sse } from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Get,
+  MessageEvent,
+  Param,
+  Post,
+  Sse,
+} from '@nestjs/common';
 import { Observable, map } from 'rxjs';
 import { WalletAssetsService } from './wallet-assets.service';
 
