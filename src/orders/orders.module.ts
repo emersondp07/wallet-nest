@@ -15,8 +15,8 @@ import { OrdersService } from './orders.service';
         options: {
           client: {
             clientId: 'orders',
-            brokers: ['host.docker.internal:9092'],
-            // brokers: ['kafka:9094'], // para interna do docker
+            // brokers: ['host.docker.internal:9092'],
+            brokers: ['kafka:9094'], // para interna do docker
           },
         },
       },
@@ -24,5 +24,6 @@ import { OrdersService } from './orders.service';
   ],
   controllers: [OrdersController],
   providers: [OrdersService],
+  exports: [OrdersService],
 })
 export class OrdersModule {}

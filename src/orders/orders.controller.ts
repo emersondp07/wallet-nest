@@ -52,7 +52,7 @@ export class OrdersController {
           ? transaction.seller_id
           : transaction.buyer_id,
       broker_transaction_id: transaction.transaction_id,
-      negociated_shares: transaction.shares,
+      negotiated_shares: transaction.shares,
       price: transaction.price,
     });
   }

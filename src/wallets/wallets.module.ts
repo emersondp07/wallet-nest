@@ -1,6 +1,9 @@
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
-import { WalletAsset, WalletAssetSchema } from './wallet-assets/wallet-asset.schema';
+import {
+  WalletAsset,
+  WalletAssetSchema,
+} from './wallet-assets/wallet-asset.schema';
 import { WalletAssetsController } from './wallet-assets/wallet-assets.controller';
 import { WalletAssetsService } from './wallet-assets/wallet-assets.service';
 import { WalletsController } from './wallets.controller';

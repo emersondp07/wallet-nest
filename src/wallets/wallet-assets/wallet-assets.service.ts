@@ -9,10 +9,10 @@ import { WalletAsset as WalletAssetSchema } from './wallet-asset.schema';
 @Injectable()
 export class WalletAssetsService {
   constructor(
-    private readonly prismaService: PrismaService, 
+    private readonly prismaService: PrismaService,
     @InjectModel(WalletAssetSchema.name)
-    private readonly walletAssetModel: Model<WalletAssetSchema>
-    ) {}
+    private readonly walletAssetModel: Model<WalletAssetSchema>,
+  ) {}
 
   all(filter: { wallet_id: string }) {
     return this.prismaService.walletAsset.findMany({
@@ -60,7 +60,6 @@ export class WalletAssetsService {
           { fullDocument: 'updateLookup' },
         )
         .on('change', async (data) => {
-          console.log(data);
           const walletAsset = await this.prismaService.walletAsset.findUnique({
             where: {
               id: data.fullDocument._id + '',

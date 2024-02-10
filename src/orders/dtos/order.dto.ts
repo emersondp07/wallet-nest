@@ -13,7 +13,7 @@ export class InputExecuteTransactionDto {
   status: 'OPEN' | 'CLOSED';
   related_investor_id: string;
   broker_transaction_id: string;
-  negociated_shares: number;
+  negotiated_shares: number;
   price: number;
 }
 
